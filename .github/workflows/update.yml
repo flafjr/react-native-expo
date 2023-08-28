@@ -1,9 +1,14 @@
 name: update
-on: push
+# only trigger on pull request closed events
+on:
+  pull_request:
+    types: [ closed ]
 
 jobs:
   update:
     name: EAS Update
+    # this job will only run if the PR has been merged
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Check for EXPO_TOKEN

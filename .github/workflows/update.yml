@@ -1,9 +1,10 @@
 name: update
 # only trigger on pull request closed events
 on:
-  pull_request:
-    types: [ closed ]
-
+  pull_request_target:
+    types: [closed]
+    branches:
+      - main
 jobs:
   update:
     name: EAS Update

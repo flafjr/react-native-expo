@@ -1,9 +1,28 @@
-# name: preview
-# on: pull_request
+name: preview
+on:
+  pull_request_target:
+    types: [opened]
+    branches:
+      - main
+      - master
+      - develop
+      - staging
+      - release/*
+      - hotfix/*
+      - feature/*
+      - bugfix/*
+      - chore/*
+      - ci/*
+      - docs/*
+      - refactor/*
 
-# jobs:
-#   update:
-#     name: EAS Update
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo The PR was created
+    #     name: EAS Update
 #     runs-on: ubuntu-latest
 #     permissions:
 #       contents: read

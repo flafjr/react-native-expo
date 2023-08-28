@@ -36,6 +36,8 @@
     },
     "updates": {
       "url": "https://u.expo.dev/a759f21b-9f51-493a-b69e-a3193b317970"
-    }
+    },
+    "owner": "flafjr",
+    "extra.eas.projectId": "a759f21b-9f51-493a-b69e-a3193b317970"
   }
 }
